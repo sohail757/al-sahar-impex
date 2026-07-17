@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Multi Tourmaline | AL SAHAR IMPEX</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:#fff;
+font-family:Montserrat,sans-serif;
+line-height:1.7;
+}
+
+header{
+background:#111;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:2px solid #D4AF37;
+}
+
+nav{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#D4AF37;
+font-family:"Playfair Display",serif;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-size:18px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#D4AF37;
+}
+
+.container{
+max-width:1200px;
+margin:60px auto;
+padding:20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.product-image img{
+width:100%;
+border-radius:20px;
+border:3px solid #D4AF37;
+box-shadow:0 0 30px rgba(212,175,55,.25);
+transition:.4s;
+cursor:pointer;
+}
+
+.product-image img:hover{
+transform:scale(1.05);
+}
+
+.product-info h1{
+font-family:"Playfair Display",serif;
+font-size:48px;
+color:#D4AF37;
+margin-bottom:15px;
+}
+
+.product-info h2{
+font-size:30px;
+color:#D4AF37;
+margin-bottom:20px;
+}
+
+.product-info p{
+font-size:18px;
+color:#ddd;
+margin-bottom:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+background:#111;
+}
+
+table td{
+border:1px solid #333;
+padding:15px;
+}
+
+table td:first-child{
+color:#D4AF37;
+font-weight:bold;
+width:40%;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#D4AF37;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#0F6B4A;
+color:#fff;
+transform:translateY(-3px);
+}
+
+.btn2{
+display:inline-block;
+margin-top:20px;
+padding:15px 35px;
+background:#25D366;
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+transition:.3s;
+}
+
+.btn2:hover{
+background:#128C7E;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+font-size:32px;
+color:white;
+box-shadow:0 0 20px rgba(0,0,0,.4);
+z-index:9999;
+transition:.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+background:#128C7E;
+}
+
+footer{
+margin-top:80px;
+padding:40px 20px;
+background:#111;
+border-top:2px solid #D4AF37;
+text-align:center;
+}
+
+footer h2{
+color:#D4AF37;
+margin-bottom:15px;
+}
+
+footer p{
+color:#ccc;
+margin:8px 0;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.container{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.product-info h1{
+font-size:36px;
+}
+
+.btn,.btn2{
+display:block;
+text-align:center;
+margin:15px 0;
+}
+
+}
+
+.gallery{
+display:flex;
+gap:10px;
+margin-top:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:80px;
+height:80px;
+object-fit:cover;
+border:2px solid #D4AF37;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.1);
+border-color:#fff;
+}
+
+.related{
+max-width:1200px;
+margin:80px auto;
+padding:20px;
+}
+
+.related h2{
+text-align:center;
+color:#D4AF37;
+font-size:38px;
+margin-bottom:40px;
+}
+
+.related-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.related-card{
+background:#111;
+border:2px solid #D4AF37;
+border-radius:15px;
+padding:20px;
+text-align:center;
+transition:.3s;
+}
+
+.related-card:hover{
+transform:translateY(-8px);
+}
+
+.related-card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.related-card h3{
+color:#D4AF37;
+margin-bottom:15px;
+}
+
+.related-card a{
+display:inline-block;
+background:#D4AF37;
+color:#000;
+padding:10px 25px;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
+
+.popup img{
+max-width:90%;
+max-height:90%;
+border:4px solid #D4AF37;
+border-radius:15px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:40px;
+font-size:50px;
+color:white;
+cursor:pointer;
+}
+
+.trust-section{
+max-width:1200px;
+margin:60px auto;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.trust-box{
+background:#111;
+border:2px solid #D4AF37;
+border-radius:15px;
+padding:25px;
+text-align:center;
+transition:.3s;
+}
+
+.trust-box:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px rgba(212,175,55,.3);
+}
+
+.trust-box h3{
+color:#D4AF37;
+margin-bottom:15px;
+}
+
+.trust-box p{
+color:#ddd;
+}
+
+.inquiry{
+max-width:800px;
+margin:70px auto;
+padding:20px;
+}
+
+.inquiry h2{
+text-align:center;
+color:#D4AF37;
+margin-bottom:30px;
+font-size:36px;
+}
+
+.inquiry form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.inquiry input,
+.inquiry textarea{
+padding:15px;
+background:#111;
+color:#fff;
+border:2px solid #D4AF37;
+border-radius:10px;
+font-size:16px;
+}
+
+.inquiry textarea{
+height:150px;
+resize:vertical;
+}
+
+.inquiry button{
+padding:16px;
+background:#D4AF37;
+color:#000;
+border:none;
+border-radius:40px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.inquiry button:hover{
+background:#0F6B4A;
+color:#fff;
+}
+
+.reviews{
+max-width:1200px;
+margin:80px auto;
+padding:20px;
+}
+
+.reviews h2{
+text-align:center;
+color:#D4AF37;
+font-size:36px;
+margin-bottom:40px;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.review-card{
+background:#111;
+border:2px solid #D4AF37;
+border-radius:15px;
+padding:25px;
+text-align:center;
+transition:.3s;
+}
+
+.review-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px rgba(212,175,55,.3);
+}
+
+.review-card p{
+margin:20px 0;
+color:#ddd;
+}
+
+.review-card h4{
+color:#D4AF37;
+}
+
+.faq{
+max-width:1000px;
+margin:80px auto;
+padding:20px;
+}
+
+.faq h2{
+text-align:center;
+color:#D4AF37;
+font-size:36px;
+margin-bottom:40px;
+}
+
+.faq-item{
+background:#111;
+border:2px solid #D4AF37;
+border-radius:15px;
+padding:20px;
+margin-bottom:20px;
+}
+
+.faq-item h3{
+color:#D4AF37;
+margin-bottom:10px;
+}
+
+.faq-item p{
+color:#ddd;
+line-height:1.8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+AL SAHAR IMPEX
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#products">Products</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="product-image">
+
+<img id="mainImage"
+src="images/tourmaline.png"
+alt="Multi Tourmaline"
+onclick="openImage(this.src)">
+
+<div class="gallery">
+
+<img src="images/tourmaline.png" onclick="changeImage(this.src)">
+
+<img src="images/tourmaline2.png" onclick="changeImage(this.src)">
+
+<img src="images/tourmaline3.png" onclick="changeImage(this.src)">
+
+<img src="images/tourmaline4.png" onclick="changeImage(this.src)">
+
+</div>
+
+</div>
+
+<div class="product-info">
+
+<h1>Multi Tourmaline</h1>
+
+<h2>Contact for Best Price</h2>
+
+<p><strong>Availability:</strong> In Stock</p>
+
+<p><strong>Bulk Orders & Wholesale Prices Available.</strong></p>
+
+<p>
+Premium Natural Tourmaline available in beautiful vibrant colors with excellent transparency. Ideal for custom jewelry and gemstone collections.
+</p>
+
+<table>
+
+<tr>
+<td>Origin</td>
+<td>Mozambique</td>
+</tr>
+
+<tr>
+<td>Treatment</td>
+<td>Natural</td>
+</tr>
+
+<tr>
+<td>Shape</td>
+<td>All Shapes Are Available</td>
+</tr>
+
+<tr>
+<td>Quality</td>
+<td>Excellent Premium Quality</td>
+</tr>
+
+<tr>
+<td>Suitable For</td>
+<td>Luxury Jewelry, Rings, Pendants & Collection</td>
+</tr>
+
+</table>
+
+<a href="https://wa.me/918302830758" class="btn">
+WhatsApp Inquiry
+</a>
+
+<br>
+
+<a href="index.html" class="btn2">
+⬅ Back to Home
+</a>
+
+</div>
+
+</div>
+
+<section style="max-width:1200px;margin:80px auto;padding:20px;">
+
+<h2 style="text-align:center;color:#D4AF37;font-size:36px;margin-bottom:40px;">
+Why Buy From AL SAHAR IMPEX?
+</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
+
+<div style="background:#111;padding:25px;border:2px solid #D4AF37;border-radius:15px;text-align:center;">
+<h3 style="color:#D4AF37;">💎 100% Natural</h3>
+<p>Authentic natural gemstones sourced from trusted origins.</p>
+</div>
+
+<div style="background:#111;padding:25px;border:2px solid #D4AF37;border-radius:15px;text-align:center;">
+<h3 style="color:#D4AF37;">🌍 Worldwide Shipping</h3>
+<p>Fast and secure international shipping for wholesale and retail buyers.</p>
+</div>
+
+<div style="background:#111;padding:25px;border:2px solid #D4AF37;border-radius:15px;text-align:center;">
+<h3 style="color:#D4AF37;">🤝 Trusted Exporter</h3>
+<p>Professional gemstone supplier from Jaipur, Rajasthan, India.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="related">
+
+<h2>Related Gemstones</h2>
+
+<div class="related-grid">
+
+<div class="related-card">
+<img src="images/moonstone.png">
+<h3>Rainbow Moonstone</h3>
+<a href="moonstone.html">View Details</a>
+</div>
+
+<div class="related-card">
+<img src="images/sapphire.png">
+<h3>Blue Sapphire</h3>
+<a href="sapphire.html">View Details</a>
+</div>
+
+<div class="related-card">
+<img src="images/emerald.png">
+<h3>Emerald</h3>
+<a href="emerald.html">View Details</a>
+</div>
+
+<div class="related-card">
+<img src="images/aquamarine.png">
+<h3>Aquamarine</h3>
+<a href="aquamarine.html">View Details</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="trust-section">
+
+<div class="trust-box">
+<h3>📜 Certificate Available</h3>
+<p>Certification can be provided on request for selected gemstones.</p>
+</div>
+
+<div class="trust-box">
+<h3>🌍 Worldwide Shipping</h3>
+<p>We ship safely and securely to customers across the globe.</p>
+</div>
+
+<div class="trust-box">
+<h3>🔒 Secure Packaging</h3>
+<p>Every gemstone is professionally packed to ensure safe delivery.</p>
+</div>
+
+</section>
+
+<section class="inquiry">
+
+<h2>Send Inquiry</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="WhatsApp Number" required>
+
+<input type="text" placeholder="Country">
+
+<input type="text" placeholder="Gemstone Name">
+
+<input type="number" placeholder="Quantity">
+
+<textarea placeholder="Your Requirement"></textarea>
+
+<button type="submit">Send Inquiry</button>
+
+</form>
+
+</section>
+
+<section class="reviews">
+
+<h2>Customer Reviews</h2>
+
+<div class="review-grid">
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>"Excellent quality gemstones and fast shipping. Highly recommended."</p>
+<h4>— Michael, USA</h4>
+</div>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>"Beautiful natural gemstones exactly as described."</p>
+<h4>— Emma, UK</h4>
+</div>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>"Professional seller with outstanding customer service."</p>
+<h4>— David, Australia</h4>
+</div>
+
+</div>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<h3>Are your gemstones 100% natural?</h3>
+<p>Yes, we deal in genuine natural gemstones sourced from trusted origins.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you offer worldwide shipping?</h3>
+<p>Yes, we ship gemstones safely to customers worldwide.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can I order in bulk?</h3>
+<p>Yes, wholesale and bulk orders are always welcome.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you provide gemstone certificates?</h3>
+<p>Certification is available on request for selected gemstones.</p>
+</div>
+
+</section>
+
+<footer>
+
+<h2>AL SAHAR IMPEX</h2>
+
+<p>Natural Gemstones & Jewelry Exporter</p>
+
+<p>📧 Email: info@alsaharimpex.com</p>
+
+<p>📱 WhatsApp: +91 8302830758</p>
+
+<p>📍 Jaipur, Rajasthan, India</p>
+
+<p style="margin-top:20px;color:#888;">
+© 2026 AL SAHAR IMPEX. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+function changeImage(image){
+
+document.getElementById("mainImage").src=image;
+
+}
+
+</script>
+
+<a href="https://wa.me/918302830758"
+class="whatsapp-float"
+target="_blank">
+
+💬
+
+</a>
+
+<div id="imagePopup" class="popup">
+
+<span class="close" onclick="closeImage()">&times;</span>
+
+<img id="popupImage">
+
+</div>
+
+<script>
+
+function changeImage(image){
+document.getElementById("mainImage").src=image;
+}
+
+function openImage(){
+
+document.getElementById("imagePopup").style.display="flex";
+
+document.getElementById("popupImage").src=
+document.getElementById("mainImage").src;
+
+}
+
+function closeImage(){
+
+document.getElementById("imagePopup").style.display="none";
+
+}
+
+</script>
+
+<script src="js/script.js"></script>
+
+<div id="imagePopup" class="image-popup">
+    <span class="close-popup" onclick="closeImage()">&times;</span>
+    <img id="popupImage" src="" alt="Gemstone">
+</div>
+
+</body>
+
+</html>
